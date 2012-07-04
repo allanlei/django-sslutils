@@ -1,10 +1,3 @@
-===============================================
-django-crispy-form has replaced django-uni-form
-===============================================
-
-
-We've decided to move development on `django-uni-form` to `django-crispy-forms`_.  From now on, development on `django-uni-form` has been stopped, and any future work will be for security issues only on legacy code. 
-
 Installation
 ================
 .. code-block:: console
