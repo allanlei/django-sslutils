@@ -8,7 +8,7 @@ import new
 #Copy of django.http.HttpRequest.is_secure from Django 1.4
 def is_secure(self):
     # First, check the SECURE_PROXY_SSL_HEADER setting.
-    if settings.SECURE_PROXY_SSL_HEADER:
+    if hasattr(settings, 'SECURE_PROXY_SSL_HEADER'):
         try:
             header, value = settings.SECURE_PROXY_SSL_HEADER
         except ValueError:
@@ -19,12 +19,12 @@ def is_secure(self):
     # subclasses to implement.
     return self._is_secure()
 
-
 class SecureProxySSLHeaderMiddleware(object):
     '''
     Support for reverse proxy is_secure
     '''
     def process_request(self, request, *args, **kwargs):
+        request._is_secure = request.is_secure
         request.is_secure = new.instancemethod(is_secure, request, None)
         return None
 
