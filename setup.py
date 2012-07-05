@@ -10,7 +10,7 @@ def find_packages_in(where, **kwargs):
 
 setup(
     name = 'django-sslutils',
-    version = '0.1.0',
+    version = '0.1.1',
     author = 'Allan Lei',
     author_email = 'allanlei@helveticode.com',
     description = 'SSL helpers for Django',
