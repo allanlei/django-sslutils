@@ -14,11 +14,22 @@ setup(
     author = 'Allan Lei',
     author_email = 'allanlei@helveticode.com',
     description = 'SSL helpers for Django',
-    license=open('LICENSE').read(),
     keywords = 'django ssl',
     url = 'https://github.com/allanlei/django-sslutils',
     packages=find_packages_in('sslutils'),
     install_requires=[
         'django-appconf>=0.5',
     ],
+    classifiers = [
+        'Development Status :: 4 - Beta',
+        'Environment :: Web Environment',
+        'Framework :: Django',
+        'Intended Audience :: Developers',
+        'License :: OSI Approved :: BSD License',
+        'Operating System :: OS Independent',
+        'Programming Language :: Python',
+        'Topic :: Security',
+        'Topic :: Internet :: WWW/HTTP',
+        'Topic :: Software Development :: Libraries :: Python Modules',
+   ],
 )
